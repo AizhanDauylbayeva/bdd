@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tests" thread-count="1">
+
+    <test verbose="1" name="Cloud test">
+        <classes>
+            <class name="tests.CloudTest"/>
+        </classes>
+    </test>
+</suite>
