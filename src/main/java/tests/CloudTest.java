@@ -1,6 +1,8 @@
 package tests;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import framework.common.pages.HomePage;
 import framework.common.pages.InboxPage;
 import org.testng.Assert;
@@ -10,18 +12,30 @@ import framework.common.pages.CloudPage;
 public class CloudTest {
 
     private CloudPage cloudPage;
-/*    private HomePage homePage;
+    private InboxPage inbox;
+    private HomePage homePage;
+    private String username;
 
     @Given("Given an open browser with mail.ru")
-            homePage = new HomePage();
-    InboxPage inbox = homePage.open();*/
-
-    @Test(description = "Login test")
-    public void loginTest() {
-        Assert.assertTrue(isUserSignedIn(), "Authentication failed");
+    public void open(){
+        homePage = new HomePage();
+        homePage.open();
     }
 
-    @Test(dependsOnMethods = "loginTest")
+    @When("fill username as (.*) and password as (.*)")
+    public void fillInput(String username, String pass){
+        this.username = username;
+        homePage.fillUsername(username).fillPassword(pass);
+    }
+
+    @Then("click and we reach the inbox page")
+    public void signIn() {
+        inbox = homePage.signIn();
+        Assert.assertTrue(inbox.getUserName().equals(this.username));
+    }
+
+
+    /*@Test()
     public void openCloudPage() {
         cloudPage = inbox.openCloudPage();
         Assert.assertEquals(cloudPage.getTitle(), "Облако Mail.Ru");
@@ -39,5 +53,5 @@ public class CloudTest {
     public void removeTheFolder() {
         cloudPage.removeTheNewFolder();
         Assert.assertFalse(cloudPage.isFolderExist(), "The folder doesn't removed");
-    }
+    }*/
 }
