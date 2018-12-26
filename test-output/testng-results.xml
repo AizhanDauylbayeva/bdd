@@ -82,8 +82,8 @@
     <groups>
     </groups>
     <test name="Cloud test" duration-ms="29843" started-at="2018-12-24T14:46:56 ALMT" finished-at="2018-12-24T14:47:26 ALMT">
-      <class name="tests.CloudTest">
-        <test-method status="PASS" signature="login()[pri:0, instance:tests.CloudTest@cb644e]" name="login" is-config="true" duration-ms="8371" started-at="2018-12-24T14:46:56 ALMT" finished-at="2018-12-24T14:47:05 ALMT">
+      <class name="test.CloudTest">
+        <test-method status="PASS" signature="login()[pri:0, instance:test.CloudTest@cb644e]" name="login" is-config="true" duration-ms="8371" started-at="2018-12-24T14:46:56 ALMT" finished-at="2018-12-24T14:47:05 ALMT">
           <reporter-output>
             <line>
               <![CDATA[Finding element: By.id: mailbox:login, current URL: 'https://mail.ru/']]>
@@ -102,7 +102,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:tests.CloudTest@cb644e]" name="loginTest" duration-ms="9903" started-at="2018-12-24T14:47:05 ALMT" description="Login test" finished-at="2018-12-24T14:47:15 ALMT">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:test.CloudTest@cb644e]" name="loginTest" duration-ms="9903" started-at="2018-12-24T14:47:05 ALMT" description="Login test" finished-at="2018-12-24T14:47:15 ALMT">
           <reporter-output>
             <line>
               <![CDATA[Finding element: By.xpath: //*[@id='PH_user-email'], current URL: 'https://mail.ru/']]>
@@ -121,7 +121,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="createFolder()[pri:0, instance:tests.CloudTest@cb644e]" name="createFolder" duration-ms="8458" started-at="2018-12-24T14:47:15 ALMT" depends-on-methods="tests.CloudTest.loginTest" finished-at="2018-12-24T14:47:23 ALMT">
+        <test-method status="PASS" signature="createFolder()[pri:0, instance:test.CloudTest@cb644e]" name="createFolder" duration-ms="8458" started-at="2018-12-24T14:47:15 ALMT" depends-on-methods="test.CloudTest.loginTest" finished-at="2018-12-24T14:47:23 ALMT">
           <reporter-output>
             <line>
               <![CDATA[Finding element: By.xpath: //span[@class='js-text-inner pm-toolbar__button__text__inner' and contains(string(), 'Облако')], current URL: 'https://e.mail.ru/messages/inbox/?back=1']]>
@@ -146,7 +146,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- createFolder -->
-        <test-method status="PASS" signature="removeTheFolder()[pri:0, instance:tests.CloudTest@cb644e]" name="removeTheFolder" duration-ms="1518" started-at="2018-12-24T14:47:23 ALMT" depends-on-methods="tests.CloudTest.createFolder" finished-at="2018-12-24T14:47:25 ALMT">
+        <test-method status="PASS" signature="removeTheFolder()[pri:0, instance:test.CloudTest@cb644e]" name="removeTheFolder" duration-ms="1518" started-at="2018-12-24T14:47:23 ALMT" depends-on-methods="test.CloudTest.createFolder" finished-at="2018-12-24T14:47:25 ALMT">
           <reporter-output>
             <line>
               <![CDATA[Finding element: By.xpath: //div[@data-id='/Новая папка']//div[@class='b-checkbox__box'], current URL: 'https://cloud.mail.ru/home/']]>
@@ -162,7 +162,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- removeTheFolder -->
-        <test-method status="PASS" signature="doubleClickTest()[pri:0, instance:tests.CloudTest@cb644e]" name="doubleClickTest" duration-ms="249" started-at="2018-12-24T14:47:25 ALMT" depends-on-methods="tests.CloudTest.removeTheFolder" finished-at="2018-12-24T14:47:25 ALMT">
+        <test-method status="PASS" signature="doubleClickTest()[pri:0, instance:test.CloudTest@cb644e]" name="doubleClickTest" duration-ms="249" started-at="2018-12-24T14:47:25 ALMT" depends-on-methods="test.CloudTest.removeTheFolder" finished-at="2018-12-24T14:47:25 ALMT">
           <reporter-output>
             <line>
               <![CDATA[Finding element: By.xpath: //div[@data-id='/Pictures']/*[@class='b-thumb__content'], current URL: 'https://cloud.mail.ru/home/']]>
@@ -175,11 +175,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- doubleClickTest -->
-        <test-method status="PASS" signature="kill()[pri:0, instance:tests.CloudTest@cb644e]" name="kill" is-config="true" duration-ms="1288" started-at="2018-12-24T14:47:25 ALMT" description="closePanel browser" finished-at="2018-12-24T14:47:26 ALMT">
+        <test-method status="PASS" signature="kill()[pri:0, instance:test.CloudTest@cb644e]" name="kill" is-config="true" duration-ms="1288" started-at="2018-12-24T14:47:25 ALMT" description="closePanel browser" finished-at="2018-12-24T14:47:26 ALMT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- kill -->
-      </class> <!-- tests.CloudTest -->
+      </class> <!-- test.CloudTest -->
     </test> <!-- Cloud test -->
   </suite> <!-- Tests -->
 </testng-results>

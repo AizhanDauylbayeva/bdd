@@ -10,9 +10,16 @@ public class User {
     }
 
     public User(){
-        this.username = "new_account_2018@bk.ru";
-        this.pass = "password2018";
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String pass) {
+        this.pass = pass;
+    }
+
     public String getUsername() {
         return username;
     }

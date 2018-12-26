@@ -1,4 +1,4 @@
-package tests;
+package test;
 
 import framework.common.bo.Letter;
 import org.testng.Assert;

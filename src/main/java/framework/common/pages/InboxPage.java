@@ -15,6 +15,10 @@ public class InboxPage extends DriverDecorator {
     @FindBy(xpath = "//*[@id='b-toolbar__left']//span")
     private WebElement createNewMailButton;
 
+    public WebElement getCloudButton() {
+        return cloudButton;
+    }
+
     @FindBy(xpath = "//span[@class='js-text-inner pm-toolbar__button__text__inner' and contains(string(), 'Облако')]")
     private WebElement cloudButton;
 

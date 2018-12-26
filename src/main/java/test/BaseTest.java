@@ -1,4 +1,4 @@
-package tests;
+package test;
 
 import framework.common.bo.User;
 import framework.common.pages.HomePage;
@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 public class BaseTest {
 
     protected InboxPage inbox;
-    protected User user = new User();
+    protected User user = new User("new_account_2018@bk.ru", "password2018");
 
     @BeforeClass
     public void login() {
