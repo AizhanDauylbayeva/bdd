@@ -21,7 +21,7 @@ public class BaseTest {
         return inbox.getUserName().equals(user.getUsername());
     }
 
-    @AfterClass(description = "closePanel browser")
+    @AfterClass(description = "close browser")
     public void kill() {
         Driver.getWebDriverInstance().quit();
     }
