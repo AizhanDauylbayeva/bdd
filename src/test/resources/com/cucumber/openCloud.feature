@@ -1,6 +1,6 @@
 Feature: Login and open the cloud page
 
-Background: User is Logged In
+Background: User is logged In
 
 Given an open browser with mail.ru
 When fill username "new_account_2018@bk.ru" and password "password2018"
